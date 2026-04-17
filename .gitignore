@@ -4,9 +4,6 @@ output/
 # Claude Code local settings override (per-user permissions, sensitive paths)
 .claude/settings.local.json
 
-# Rendered example PDF (regenerated on demand from example_resume.md)
-example-resume-template/example_resume.pdf
-
 # Python cache
 __pycache__/
 *.pyc
