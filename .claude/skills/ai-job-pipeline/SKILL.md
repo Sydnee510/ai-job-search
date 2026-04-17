@@ -66,7 +66,7 @@ Triggers:
 2. Produce a summary:
    - **By stage:** how many in each of {analyzing, drafting, applied, screening, interviewing, offer, rejected, withdrawn, on_hold}
    - **Top 5 by fit score** still active (not rejected / withdrawn)
-   - **Stale applications** — applied > 7 days ago, still in `applied` stage, not yet moved to `screening`
+   - **Stale applications** — applied > 5 business days ago, still in `applied` stage, not yet moved to `screening`
    - **Upcoming actions** — any `next_action` dated within the next 7 days
 
 3. Recommend 3 concrete next actions (specific row ids, specific verbs): "Follow up with Anthropic (id 3), refresh tailored resume for Perplexity (id 7, fit 9/10 but never submitted), pick 3 new Tier 1 targets from `knowledge/target_companies.md`."
