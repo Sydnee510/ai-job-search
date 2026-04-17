@@ -35,7 +35,8 @@ Five peer skills, one per job-to-be-done:
 
 Together they turn the application funnel into a single command: **discover → apply → interview-prep → pipeline review**, with submission as the one human-only step.
 
-Visual workflow diagrams: [docs/workflows.html](docs/workflows.html)
+- **Visual workflow diagrams:** [docs/workflows.html](docs/workflows.html)
+- **Preview the actual output** (before you fork): [example-output/](example-output/) captures a full end-to-end run (discover + apply + interview prep + pipeline) for a fictional candidate applying to real live roles. Start here if you want to see what the skills produce.
 
 ---
 
@@ -96,7 +97,8 @@ ai-job-search/
 ├── docs/
 │   └── workflows.html                ← index of all 5 skill workflows
 ├── example-resume-template/           ← rendered sample PDF + source md
-└── output/                            ← generated drafts + tracker.csv (gitignored)
+├── example-output/                    ← captured end-to-end run (fictional persona)
+└── output/                            ← your generated drafts + tracker.csv (gitignored)
 ```
 
 ---

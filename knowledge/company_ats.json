@@ -53,9 +53,10 @@
       "slug": "huggingface",
       "display": "Hugging Face",
       "tier": 1,
-      "ats": "lever",
+      "ats": null,
       "board_id": "huggingface",
-      "confidence": "guess"
+      "confidence": "guess",
+      "notes": "Probe disabled: Hugging Face uses a custom careers site (apply.workable.com / huggingface.co/jobs). Use Track B WebSearch with site:huggingface.co/jobs or site:apply.workable.com/huggingface."
     },
     {
       "slug": "scaleai",
@@ -69,9 +70,9 @@
       "slug": "glean",
       "display": "Glean",
       "tier": 1,
-      "ats": "ashby",
-      "board_id": "glean",
-      "confidence": "guess"
+      "ats": "greenhouse",
+      "board_id": "gleanwork",
+      "confidence": "probe_verified"
     },
     {
       "slug": "writer",
@@ -93,9 +94,10 @@
       "slug": "replicate",
       "display": "Replicate",
       "tier": 1,
-      "ats": "ashby",
+      "ats": null,
       "board_id": "replicate",
-      "confidence": "guess"
+      "confidence": "guess",
+      "notes": "Probe disabled: Replicate uses a custom careers site. Use Track B WebSearch with site:replicate.com/careers."
     },
     {
       "slug": "notion",
