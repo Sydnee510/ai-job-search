@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "_notes": [
+    "ATS mapping for target companies. Edit this file as you learn which ATS each company uses.",
+    "The included entries are a STARTER list of well-known AI companies — replace with your own targets.",
+    "Fields per company:",
+    "  slug:       canonical lowercase identifier (used in tracker + output slugs)",
+    "  display:    human-readable name shown in output",
+    "  tier:       1 = AI-native, 2 = AI-forward, 3 = domain-specialist, 4 = stealth/early",
+    "  ats:        one of 'greenhouse', 'lever', 'ashby', null (null = probe on next run)",
+    "  board_id:   the company's identifier on the chosen ATS (often same as slug)",
+    "  confidence: 'verified' (you've confirmed), 'probe_verified' (discover.py confirmed),",
+    "              or 'guess' (seeded, to verify)",
+    "  notes:      freeform (optional). Use 'Probe disabled:' to skip custom-ATS companies.",
+    "",
+    "If a target company isn't here, discover.py will skip it. Add it with ats=null to auto-probe.",
+    "The probe order is greenhouse -> lever -> ashby; the first one that responds wins and is cached back."
+  ],
+  "companies": [
+    {
+      "slug": "anthropic",
+      "display": "Anthropic",
+      "tier": 1,
+      "ats": "greenhouse",
+      "board_id": "anthropic",
+      "confidence": "verified"
+    },
+    {
+      "slug": "openai",
+      "display": "OpenAI",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "openai",
+      "confidence": "probe_verified"
+    },
+    {
+      "slug": "cohere",
+      "display": "Cohere",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "cohere",
+      "confidence": "probe_verified"
+    },
+    {
+      "slug": "perplexity",
+      "display": "Perplexity",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "perplexity",
+      "confidence": "guess"
+    },
+    {
+      "slug": "huggingface",
+      "display": "Hugging Face",
+      "tier": 1,
+      "ats": "lever",
+      "board_id": "huggingface",
+      "confidence": "guess"
+    },
+    {
+      "slug": "scaleai",
+      "display": "Scale AI",
+      "tier": 1,
+      "ats": "greenhouse",
+      "board_id": "scaleai",
+      "confidence": "guess"
+    },
+    {
+      "slug": "glean",
+      "display": "Glean",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "glean",
+      "confidence": "guess"
+    },
+    {
+      "slug": "writer",
+      "display": "Writer",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "writer",
+      "confidence": "guess"
+    },
+    {
+      "slug": "runway",
+      "display": "Runway",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "runway",
+      "confidence": "guess"
+    },
+    {
+      "slug": "replicate",
+      "display": "Replicate",
+      "tier": 1,
+      "ats": "ashby",
+      "board_id": "replicate",
+      "confidence": "guess"
+    },
+    {
+      "slug": "notion",
+      "display": "Notion",
+      "tier": 2,
+      "ats": "ashby",
+      "board_id": "notion",
+      "confidence": "probe_verified"
+    },
+    {
+      "slug": "linear",
+      "display": "Linear",
+      "tier": 2,
+      "ats": "ashby",
+      "board_id": "linear",
+      "confidence": "guess"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "_notes": [
+    "Single source of truth for user data across all ai-job-* skills.",
+    "Every skill injects this file at load time; change values here and the",
+    "entire system picks them up.",
+    "See user_profile_schema.md for full field descriptions and defaults.",
+    "",
+    "This toolkit is NOT AI-specific. The project name and default examples",
+    "lean AI because that's where the original author targeted, but you can",
+    "use this for ANY role: UX Designer, Product Manager, Software Engineer,",
+    "Technical Program Manager, Cybersecurity Analyst, Data Scientist,",
+    "Developer Advocate, Engineering Manager, Designer, Researcher, etc.",
+    "See targeting.target_job_titles below and _role_examples for starter lists.",
+    "",
+    "Fork checklist:",
+    "  1. Fill out contact.{name,email,phone,linkedin,github,location_city}",
+    "  2. Set career.{career_stage,years_experience,current_role,current_employer}",
+    "  3. Set targeting.target_job_titles (the exact titles you want to apply for)",
+    "  4. Tune locations[] and compensation to your priorities",
+    "  5. Leave agent_runtime.user_agent_contact blank if you don't want a public UA",
+    "  6. If targeting non-AI roles, also edit discover.py AI_BOOST_PATTERNS",
+    "     to boost title keywords relevant to YOUR field"
+  ],
+  "_role_examples": {
+    "_comment": "Copy one of these into targeting.target_job_titles to get started. Mix across rows if you're open to multiple role families.",
+    "ai_engineer": ["AI Engineer", "Senior AI Engineer", "Staff AI Engineer", "ML Engineer"],
+    "ai_product_manager": ["AI Product Manager", "Senior Product Manager, AI", "Product Manager, ML"],
+    "engineering_manager": ["Engineering Manager", "Senior Engineering Manager", "Engineering Manager, AI", "Director of Engineering"],
+    "software_engineer": ["Software Engineer", "Senior Software Engineer", "Staff Software Engineer", "Backend Engineer", "Full-Stack Engineer"],
+    "ux_designer": ["UX Designer", "Senior UX Designer", "Product Designer", "Senior Product Designer", "Staff Product Designer"],
+    "technical_program_manager": ["Technical Program Manager", "Senior TPM", "Principal TPM", "Program Manager, Engineering"],
+    "cybersecurity": ["Security Engineer", "Senior Security Engineer", "Cybersecurity Analyst", "Application Security Engineer", "Cloud Security Engineer"],
+    "data_scientist": ["Data Scientist", "Senior Data Scientist", "Staff Data Scientist", "Applied Scientist", "Research Scientist"],
+    "data_engineer": ["Data Engineer", "Senior Data Engineer", "Analytics Engineer", "Platform Engineer, Data"],
+    "devrel": ["Developer Advocate", "Senior Developer Advocate", "Developer Relations Engineer", "Technical Evangelist"],
+    "researcher": ["Research Scientist", "ML Researcher", "Applied Researcher", "Research Engineer"]
+  },
+  "contact": {
+    "name": "Your Name",
+    "email": "you@example.com",
+    "phone": "+1-555-555-5555",
+    "linkedin": "linkedin.com/in/yourhandle",
+    "github": "github.com/yourhandle",
+    "website": null,
+    "location_city": "Your City, ST"
+  },
+  "targeting": {
+    "target_job_titles": [
+      "AI Engineer",
+      "Senior AI Engineer",
+      "Staff AI Engineer",
+      "Engineering Manager, AI",
+      "AI Product Manager"
+    ],
+    "target_seniority": ["senior", "staff", "lead"],
+    "target_job_families": [
+      "AI Engineer",
+      "ML Engineer",
+      "AI Product Manager",
+      "AI Researcher",
+      "AI Engineering Manager",
+      "AI Designer"
+    ],
+    "avoid_title_patterns": [
+      "Intern",
+      "Associate",
+      "Contractor",
+      "Coordinator"
+    ]
+  },
+  "career": {
+    "career_stage": "senior",
+    "years_experience": 5,
+    "current_role": "Senior Software Engineer",
+    "current_employer": "[YOUR CURRENT EMPLOYER]",
+    "current_employer_stage": "growth",
+    "is_people_manager": false,
+    "direct_reports": 0,
+    "leaving_reason_short": "Ready for my next chapter in applied AI."
+  },
+  "locations": [
+    {
+      "name": "Remote",
+      "weight": 10,
+      "aliases": ["Remote-US", "Remote - US", "Anywhere", "Worldwide", "US Remote", "USA - Remote", "Remote - United States"]
+    },
+    {
+      "name": "New York, NY",
+      "weight": 7,
+      "aliases": ["NYC", "New York City", "New York"]
+    },
+    {
+      "name": "San Francisco, CA",
+      "weight": 5,
+      "aliases": ["SF", "Bay Area", "South San Francisco", "San Francisco", "San Francisco Bay Area"],
+      "min_base_usd": 200000
+    }
+  ],
+  "hybrid_ok": true,
+  "compensation": {
+    "min_base_usd_default": 150000,
+    "comp_gates": {
+      "san francisco": 200000
+    }
+  },
+  "agent_runtime": {
+    "user_agent_contact": "github.com/yourhandle",
+    "chrome_binary": null
+  }
+}

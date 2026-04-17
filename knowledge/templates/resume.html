@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{NAME}} — Resume</title>
+<style>
+  /* ---------- Brand variables (edit these to change the whole template) ---------- */
+  /* Default: deep blue #1E40AF, Times New Roman. Swap --brand-accent to recolor.     */
+  :root {
+    --brand-accent:      #1E40AF;   /* section headers + name */
+    --brand-accent-dark: #172554;
+    --ink:             #1a1a1a;
+    --muted:           #434343;
+    --rule:            #1E40AF;
+    --serif:           "Times New Roman", Times, Georgia, serif;
+    --sans:            -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --page-margin:     0.45in;
+    --body-size:       10.25pt;
+  }
+
+  @page {
+    size: letter;
+    margin: var(--page-margin);
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: var(--body-size);
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Name block ---------- */
+  .name {
+    font-family: var(--serif);
+    font-size: 26pt;
+    font-weight: normal;
+    color: var(--brand-accent);
+    letter-spacing: 0.2pt;
+    margin: 0 0 2pt 0;
+    line-height: 1.05;
+  }
+
+  .contact {
+    font-size: 9.5pt;
+    color: var(--ink);
+    margin: 0 0 6pt 0;
+  }
+
+  .contact a {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  /* ---------- Section headers ---------- */
+  h2.section {
+    font-family: var(--serif);
+    font-size: 11pt;
+    font-weight: bold;
+    color: var(--brand-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.8pt;
+    margin: 7pt 0 2pt 0;
+    padding: 0 0 1pt 0;
+    border-bottom: 0.7pt solid var(--rule);
+  }
+
+  /* ---------- Summary paragraph ---------- */
+  .summary {
+    margin: 2pt 0 0 0;
+    text-align: left;
+    hyphens: none;
+  }
+
+  /* ---------- Work / project entry ---------- */
+  .entry {
+    margin-top: 3pt;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8pt;
+  }
+
+  .entry-company {
+    font-weight: bold;
+    font-size: 11pt;
+  }
+
+  .entry-location {
+    font-weight: bold;
+    font-size: 10.5pt;
+  }
+
+  .entry-role-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8pt;
+    margin-top: 1pt;
+  }
+
+  .entry-role {
+    font-style: italic;
+  }
+
+  .entry-dates {
+    font-style: italic;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  ul.bullets {
+    margin: 2pt 0 0 0;
+    padding-left: 14pt;
+  }
+
+  ul.bullets li {
+    margin: 0.5pt 0;
+    padding-left: 2pt;
+  }
+
+  /* ---------- Skills block ---------- */
+  .skills-list {
+    margin: 2pt 0 0 0;
+    padding-left: 14pt;
+  }
+
+  .skills-list li {
+    margin: 0.5pt 0;
+  }
+
+  .skills-list strong {
+    color: var(--brand-accent-dark);
+  }
+
+  /* ---------- Education block ---------- */
+  .education-list {
+    margin: 2pt 0 0 0;
+    padding-left: 14pt;
+  }
+
+  .education-list li {
+    margin: 0.5pt 0;
+  }
+
+  /* ---------- Project title ---------- */
+  .project-title {
+    font-weight: bold;
+    font-size: 10.5pt;
+    margin-top: 3pt;
+  }
+
+  .project-subtitle {
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 0pt;
+    font-size: 9.5pt;
+  }
+
+  /* ---------- Links ---------- */
+  a { color: var(--ink); }
+
+  /* ---------- Avoid orphaned entry headers at page break ---------- */
+  .entry, .project {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="name">{{NAME}}</h1>
+  <p class="contact">{{CONTACT_LINE}}</p>
+
+  <h2 class="section">Professional Summary</h2>
+  <p class="summary">{{SUMMARY}}</p>
+
+  <h2 class="section">Work Experience</h2>
+  {{WORK_EXPERIENCE_BLOCK}}
+
+  <h2 class="section">Technical Projects</h2>
+  {{PROJECTS_BLOCK}}
+
+  <h2 class="section">Volunteer Community Involvement</h2>
+  {{VOLUNTEER_BLOCK}}
+
+  <h2 class="section">Skills</h2>
+  {{SKILLS_BLOCK}}
+
+  <h2 class="section">Education</h2>
+  {{EDUCATION_BLOCK}}
+
+</body>
+</html>

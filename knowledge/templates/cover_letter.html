@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{NAME}} — Cover Letter — {{COMPANY}}</title>
+<style>
+  /* Default: deep blue #1E40AF, Times New Roman. Swap --brand-accent to recolor. */
+  :root {
+    --brand-accent:      #1E40AF;
+    --ink:             #1a1a1a;
+    --muted:           #434343;
+    --serif:           "Times New Roman", Times, Georgia, serif;
+    --page-margin:     0.75in;
+    --body-size:       11pt;
+  }
+
+  @page {
+    size: letter;
+    margin: var(--page-margin);
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: var(--body-size);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .name {
+    font-family: var(--serif);
+    font-size: 28pt;
+    font-weight: normal;
+    color: var(--brand-accent);
+    letter-spacing: 0.2pt;
+    margin: 0 0 2pt 0;
+    line-height: 1.1;
+  }
+
+  .contact {
+    font-size: 9.5pt;
+    color: var(--ink);
+    margin: 0 0 18pt 0;
+    border-bottom: 0.7pt solid var(--brand-accent);
+    padding-bottom: 6pt;
+  }
+
+  .contact a {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  .date {
+    margin: 0 0 14pt 0;
+    font-size: 10.5pt;
+    color: var(--muted);
+  }
+
+  .salutation {
+    margin: 0 0 10pt 0;
+  }
+
+  .body p {
+    margin: 0 0 10pt 0;
+    text-align: left;
+    hyphens: none;
+  }
+
+  .signoff {
+    margin-top: 14pt;
+  }
+
+  .signoff-name {
+    margin-top: 2pt;
+    font-weight: bold;
+  }
+
+  .signoff-contact {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-top: 1pt;
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="name">{{NAME}}</h1>
+  <p class="contact">{{CONTACT_LINE}}</p>
+
+  <p class="date">{{DATE}}</p>
+
+  <p class="salutation">{{SALUTATION}}</p>
+
+  <div class="body">
+    {{BODY_PARAGRAPHS}}
+  </div>
+
+  <p class="signoff">Best,</p>
+  <p class="signoff-name">{{NAME}}</p>
+  <p class="signoff-contact">{{CONTACT_LINE}}</p>
+
+</body>
+</html>
